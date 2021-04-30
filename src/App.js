@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import LeftPage from './Components/LeftPage/LeftPage'
+import "./App.css"
+import dataArr from "./dataArr"
+import RightPage from './Components/RightPage/RightPage'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    displayData: ''
+  }
+
+  handleClick = (id) => {
+    alert(id)
+    var filteredData = dataArr.filter(item => item.id === id)
+    this.setState({ displayData: filteredData[0] })
+    // console.log(filteredData)
+  }
+
+
+
+
+  render() {
+    return (
+      <div className="App">
+        <LeftPage handleOnClick={this.handleClick} />
+
+        <RightPage dispData={this.state.displayData} />
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
