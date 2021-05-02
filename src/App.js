@@ -22,9 +22,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <LeftPage handleOnClick={this.handleClick} />
+        <LeftPage
+          handleOnClick={this.handleClick}
+        />
 
-        <RightPage dispData={this.state.displayData} />
+        <RightPage
+          dispData={this.state.displayData}
+        />
       </div>
     )
   }
