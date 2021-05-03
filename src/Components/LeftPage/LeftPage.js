@@ -4,7 +4,6 @@ import dataArr from "../../dataArr"
 
 class LeftPage extends Component {
     render() {
-        console.log("rendering")
         return (
             <div className="LeftPage">
 
