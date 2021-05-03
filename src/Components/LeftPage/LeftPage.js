@@ -5,10 +5,7 @@ import dataArr from "../../dataArr"
 
 class LeftPage extends Component {
 
-
-
-    render() {
-        console.log("rendering")
+render() {
         return (
             <div className="LeftPage">
 
