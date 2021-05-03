@@ -8,17 +8,11 @@ class App extends Component {
   state = {
     displayData: ''
   }
-
   handleClick = (id) => {
     alert(id)
     var filteredData = dataArr.filter(item => item.id === id)
     this.setState({ displayData: filteredData[0] })
-    // console.log(filteredData)
   }
-
-
-
-
   render() {
     return (
       <div className="App">

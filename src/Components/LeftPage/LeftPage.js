@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 import classes from "./LeftPage.css"
-
 import dataArr from "../../dataArr"
 
 class LeftPage extends Component {
-
-
-
     render() {
         console.log("rendering")
         return (
