@@ -8,20 +8,14 @@ class App extends Component {
   state = {
     displayData: ''
   }
-
   handleClick = (id) => {
     var filteredData = dataArr.filter(item => item.id === id)
     this.setState({ displayData: filteredData[0] })
   }
-
-
-
-
   render() {
     return (
       <div className="App">
         <LeftPage handleOnClick={this.handleClick} />
-
         <RightPage dispData={this.state.displayData} />
       </div>
     )
