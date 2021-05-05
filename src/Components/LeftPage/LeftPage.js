@@ -5,13 +5,13 @@ import dataArr from "../../dataArr"
 
 class LeftPage extends Component {
 
-render() {
+    render() {
         return (
             <div className="LeftPage">
 
                 {
                     dataArr.map(item =>
-                        <p onClick={() => this.props.handleOnClick(item.id)} >{item.title}</p>
+                        <p key={item.id} onClick={() => this.props.handleOnClick(item.id)} >{item.title}</p>
                     )
                 }
 
